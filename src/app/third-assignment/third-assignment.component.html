@@ -1,0 +1,31 @@
+<!-- <hr>
+<button class="btn btn-primary"
+(click)="buttonclicked()">Display Details</button>
+<p *ngIf="showPassword">Secret Passworld = tune</p>
+<p *ngFor="let click of totalclick"
+[ngStyle]="{backgroundColor : getColor()}">{{click}}</p> -->
+
+<!-- solution -->
+
+<!-- <hr>
+<button class="btn btn-primary"
+(click)="buttonclicked()">Display Details</button>
+<p *ngIf = "showPassword">Secret Password = tuna</p>
+<div *ngFor=" let logItem of totalclick"
+[ngStyle]="{backgroundColor:  logItem >= 5 ? 'blue' : 'transaparent'}"
+[ngClass]="{'white-text': logItem >= 5}">
+    {{logItem}}
+</div> -->
+
+
+<!-- other solution  -->
+
+<hr>
+<button class="btn btn-primary"
+(click)="buttonclicked()">Display Details</button>
+<p *ngIf = "showPassword">Secret Password = tuna</p>
+<div *ngFor=" let logItem of totalclick ; let i = index"
+[ngStyle]="{backgroundColor:  i >= 4 ? 'blue' : 'transaparent'}"
+[ngClass]="{'white-text': i >= 4}">
+    {{logItem}}
+</div>
